@@ -45,7 +45,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Enjoyee/Script_Auto.git ~/Script_Auto
+          git clone https://github.com/Enjoyee/Script_Auto.git ~/AutoScripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -53,11 +53,11 @@ jobs:
       - name: npm install
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/Script_Auto
+          cd ~/AutoScripts
           npm install
       - name: '运行 【笑谱】'
         run: |
-          cd ~/Script_Auto
+          cd ~/AutoScripts
           node iboxpay/iboxpay.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}

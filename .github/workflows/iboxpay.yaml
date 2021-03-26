@@ -42,6 +42,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
+        XP_CASH: ${{ secrets.XP_CASH }}
     steps:
       - name: Checkout
         run: |

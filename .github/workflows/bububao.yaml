@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        bububaotokenVal: ${{ secrets.bububaotokenVal }}
+        BBB_bububaoTOKEN: ${{ secrets.bububaotokenVal }}
     steps:
       - name: Checkout
         run: |

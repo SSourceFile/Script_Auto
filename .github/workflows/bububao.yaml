@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BBB_bububaoTOKEN: ${{ secrets.bububaotokenVal }}
+        BBB_bububaoTOKEN: ${{ secrets.BBB_bububaoTOKEN }}
     steps:
       - name: Checkout
         run: |
@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.bububaotokenVal
+        if: env.BBB_bububaoTOKEN
         run: |
           cd ~/AutoScripts
           npm install
